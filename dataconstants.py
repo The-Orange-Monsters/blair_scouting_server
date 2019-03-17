@@ -1,6 +1,16 @@
-DATA_FILE = 'whitman.csv'
-ABS_DATA_DIR = '/home/carter/Desktop/' + DATA_FILE
-MEDIA_DIR = '/home/carter/ScoutingDrive/'
+import os
+
+
+# DATA_FILE = 'haymarket.csv'
+# ABS_DATA_DIR = '/home/carter/Desktop/' + DATA_FILE
+# MEDIA_DIR = '/home/carter/ScoutingDrive/'
+
+DATA_FILE = 'haymarket.csv'
+ABS_DATA_DIR = '~/frc/' + DATA_FILE
+MEDIA_DIR = '~/frc/ScoutingDrive/'
+
+ABS_DATA_DIR=os.path.expanduser(ABS_DATA_DIR)
+MEDIA_DIR=os.path.expanduser(MEDIA_DIR)
 
 HEADERS = 'team #,match #,alliance color,starting level,preload,no show,moved forward,auto piece placed,double auto,' \
           'ship cargo,level 1 cargo,level 2 cargo,level 3 cargo,ship hatches,level 1 hatches,level 2 hatches,' \
